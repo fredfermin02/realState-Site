@@ -1,0 +1,6 @@
+<div class="row pt-3">
+    <div #container *ngFor="let stat of stats" class="col" id="container">
+        <p #miElemento style="font-size: 80px;" class="fw-bold">{{stat.digit}}{{stat.unit}}</p>
+        <p class="fs-3"> {{stat.context}}</p>
+    </div>
+</div>
