@@ -1,0 +1,41 @@
+<h1 class="pt-4 container">Catalog</h1>
+<div class="row  justify-content-evenly p-4" >
+    
+    <div class="col-lg-8">
+        <div class="card border-0 p-2" *ngFor="let house of houses">
+          
+            <div class="row">
+                <!-- Image  of house -->
+                <div class="col-6 col-md-5">
+                    <img src="{{house.img}}"class="card-img img-fluid rounded-4 " alt="">
+                </div>
+
+                <!-- Information of house -->
+                <div class="col-6 col-md-7 position-relative " >
+                    <div class="p-3 border-4 ">
+                        
+                            <h3 class="pb-2">{{house.type}}</h3>
+                            <h2 class="card-title" style="font-size: 100%;">{{house.title | truncate:100}}</h2>
+                            <div class="">
+                            <p class="card-text">
+                                {{house.Description | truncate:50}}
+                            </p>
+                            <p><strong>{{house.Price  | currency}}</strong></p>
+                            
+                            <div class="d-flex flex-row">
+                                <i class="fa-sharp fa-solid fa-bed p-2"></i>
+                                <p class="p-1">{{house.rooms}} bedrooms</p>
+                                <i class="fa-solid fa-shower p-2"></i>
+                                <p class="p-1">{{house.bathrooms}} bathrooms</p>
+                                <i class="fa-sharp fa-solid fa-building p-2"></i>
+                                <p class="p-1">{{house.size}} Sq Ft</p>
+                                </div>
+                            
+                            <button type="submit"  class="btn btn-outline-dark" >Order a Call</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+
+
+<p-carousel [value]="houses" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"  [responsiveOptions]="responsiveOptions" [showIndicators]="false" >
+    <ng-template let-house pTemplate="item">
+        <div class="product-item">
+            <div class="product-item-content">
+                
+                <p-card header="{{ house.titulo }} "subheader="{{ house.Price | currency}}" >
+                    <ng-template  pTemplate="header">
+
+                        <p-image alt="Card" src="./assets/{{house.img}}" [preview]="true" alt="Image" width="250">
+                            <ng-template pTemplate="indicator">
+                                <i class="pi pi-arrow-up-right" style="font-size: 2rem"></i>
+                            </ng-template>
+                        </p-image>
+
+                        <!-- <img  alt="Card" src="./assets/{{house.img}}" /> -->
+                    </ng-template>
+                    
+                    <hr>
+                    
+                        <div class="d-flex flex-row">
+                        <i class="fa-sharp fa-solid fa-bed p-2"></i>
+                        <p class="p-1">2 bedrooms</p>
+                        <i class="fa-solid fa-shower p-2"></i>
+                        <p class="p-1">2.5 bathrooms</p>
+                        <i class="fa-sharp fa-solid fa-building p-2"></i>
+                        <p class="p-1">1050 Sq Ft</p>
+                        </div>
+                    
+                </p-card>
+
+                <!-- <div class="position-relative mb-3">
+                    <img   src="./assets/{{house.img}}"  class="img-fluid rounded-4 product-image" />
+                    <p-button icon="pi pi-arrow-up-right" styleClass="p-button-rounded p-button-secondary lay-button-over-image"></p-button>
+                </div>
+                
+                <div>
+                    <h4 class="mb-1">{{ house.titulo }}</h4>
+                    <h6 class="mt-0 mb-3">{{ house.Price | currency}}</h6>
+                    <hr>
+                    
+                    <div class="ps-3 d-flex flex-row">
+                        <i class="fa-sharp fa-solid fa-bed p-2"></i>
+                        <p class="p-1">2 bedrooms</p>
+                        <i class="fa-solid fa-shower p-2"></i>
+                        <p class="p-1">2.5 bathrooms</p>
+                        <i class="fa-sharp fa-solid fa-building p-2"></i>
+                        <p class="p-1">1050 Sq Ft</p>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

@@ -1,31 +1,77 @@
-<!-- As a link -->
+<!-- As a link
 
-<nav class="navbar navbar-expand-lg" style="background-color: #e2e2e2;">
-  <div class="container-fluid position-relative">
-    <h1 class="navbar-brand ps-4" href="#">Urban Vista</h1>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse position-absolute top-0 start-50 translate-middle-x" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Catalog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Reviews</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Contacts</a>
-        </li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-lg bg-E2E2E2">
+
     
-  </div>
-  </nav>
+      <div class="container-fluid">
+        <h1 class="navbar-brand ps-4" href="#">Urban Vista</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+  
+      <div class="collapse navbar-collapse justify-content-end"  id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    
+  </nav> -->
 
+<nav class="navbar navbar-expand-lg bg-E2E2E2">
+    <div class="container-fluid ">
+     
+        
+        
+          <a routerLink="home" style="text-decoration: none;"><h1 class="navbar-brand" >Urban Vista</h1></a>
+        
+              
+
+          <div  class="navbar-collapse collapse justify-content-end" id="navbarNavAltMarkup">
+            
+            <div class="navbar-nav text-center">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" routerLink="catalog">Catalog</a>
+              <a class="nav-link" href="#">About us</a>
+              <a class="nav-link" (click)="scrollToComponent('component1')" href="#">Contact</a>
+            </div>
+            
+          </div>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <button *ngIf="authStatus() != isAuthenticated" type="button" class="btn btn-outline-dark" routerLink="auth/login">Login/Signup</button>
+
+          <div *ngIf="authStatus() == isAuthenticated" class="dropdown">
+            <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{User()}}
+            </a>
+          
+            <ul class="dropdown-menu bg-E2E2E2">
+              <li><a class="dropdown-item bg-E2E2E2" routerLink="/dashboard">Dashboard</a></li>
+              <li><a class="dropdown-item bg-E2E2E2" (click)="onLogout()" href="#">Logout</a></li>
+            </ul>
+          </div>
+        
+          
+        
+
+      </div>
+   
+  </nav> 

@@ -18,7 +18,6 @@ interface stat {
 
 
 export class StatsComponent implements AfterContentInit, OnInit {
-  private scroller = inject(ViewportScroller)
    
 
   

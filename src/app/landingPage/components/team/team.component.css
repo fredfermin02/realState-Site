@@ -1,0 +1,21 @@
+.accordion {
+    background-color: black;
+    color: white;
+  }
+  
+  .accordion .tab {
+    background-color: black;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion .content-wrapper {
+    overflow: hidden;
+  }
+  
+  .accordion .content {
+    background-color: white;
+    color: black;
+    padding: 10px;
+  }
+  

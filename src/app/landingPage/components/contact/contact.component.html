@@ -1,0 +1,70 @@
+<!-- <div class="row g-0 justify-content-evenly" >
+    
+    <div class="col position-relative">
+        <img src="./assets/6.jpg" alt="" class="img-fluid rounded-4">
+    </div>
+    <div class="col container position-relative bg-2B2B2B rounded-4" style="right: 47%;max-width: 47%;">
+        <div class="p-3 position-relative top-50 start-50 translate-middle">
+            <h2 class="text-center text-white pb-2">Contact Us</h2>
+            <div class="input-group mb-3 ">
+                <input type="text" class="form-control bg-E2E2E2 " placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 ">
+                <input type="text" class="form-control bg-E2E2E2" placeholder="Phone number" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 ">
+                <input type="text" class="form-control bg-E2E2E2" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="button" class="btn btn-outline-light position-relative start-50">Light</button>
+        </div>
+    </div>
+</div>
+
+ -->
+
+ <div id="contact" class="row  justify-content-evenly" >
+    
+    <div class="col-lg-8">
+        <div class="card ">
+            <p-toast></p-toast>
+            <div class="row g-0">
+                <div class="col-6 col-md-5">
+                    <img src="./assets/6.jpg"class="card-img img-fluid rounded-start " alt="">
+                </div>
+                <div class="col-6 col-md-7 position-relative bg-2B2B2B border-3" >
+                    <div class="p-3 ">
+                        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"> 
+                            
+                            <h2 class="text-white pb-2">Contact Us</h2>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <input formControlName="name" type="text" class="form-control bg-E2E2E2 " placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
+                                </div>
+                                <span *ngIf="isValidField('name')"  class="form-text text-danger">
+                                    Please enter first and last name
+                               </span>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <input formControlName="email" type="text" class="form-control bg-E2E2E2" placeholder="Email" aria-label="number" aria-describedby="basic-addon1">
+                                </div>
+                                <span *ngIf="isValidField('email')"  class="form-text text-danger">
+                                    Please enter a valid email
+                                </span>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <input formControlName="phone" type="text" class="form-control bg-E2E2E2" placeholder="Phone number" aria-label="email" aria-describedby="basic-addon1">
+                                </div>
+                                <span *ngIf="isValidField('phone')"  class="form-text text-danger">
+                                    Please enter a phone number
+                                </span>
+                            </div>
+                            <button type="submit"  class="btn btn-outline-light" >Order a Call</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

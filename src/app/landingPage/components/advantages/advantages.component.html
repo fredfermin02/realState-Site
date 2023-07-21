@@ -1,0 +1,13 @@
+<p-carousel [value]="advantages" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true" [showIndicators]="false" (onPage)="1">
+    <ng-template let-advantage pTemplate="item">
+        <div class="m-2 position-relative">
+            <p-card styleClass="bg-2B2B2B rounded-4 text-light" >
+                <i class="pb-4 {{advantage.icon}}"></i>
+                <br>
+                <h2>{{advantage.title}}</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo neque nemo veniam repellendus voluptate itaque quod culpa, qui perspiciatis, et magnam. Ipsa nulla, laudantium adipisci ratione quo labore veritatis saepe.
+                <div class="p-2 lay-button-over-image bg-E2E2E2 rounded-4 "><h3 class="text-dark p-2"> {{advantage.index}} </h3></div>
+            </p-card>
+        </div>
+    </ng-template>
+</p-carousel>

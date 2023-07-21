@@ -1,11 +1,12 @@
 
 
 
-    <nav-bar></nav-bar>
-    <div style="background-color: #e2e2e2;">
+   <nav-bar class="fixed-top" ></nav-bar>
+
+    <div class="mt-5 bg-E2E2E2">
         <router-outlet></router-outlet>
     </div>
 
 
 
-
+<app-footer *ngIf="showFooter"></app-footer>
